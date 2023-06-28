@@ -5,7 +5,7 @@ import faker from 'faker';
 import { findProduct } from '../support/helper';
 
 
-it('order with helper', () => {
+it('Order with helper', () => {
     cy.log('Open website')
     cy.visit('/');
     cy.get('.close-dialog').click();
@@ -49,10 +49,13 @@ it('order with helper', () => {
 
     cy.get('body app-root div mat-sidenav-container mat-sidenav-content app-search-result div div div.ng-star-inserted mat-grid-list div mat-grid-tile:nth-child(8) div mat-card div:nth-child(2) button')
     .click()
+    
+    cy.wait(5000)
 
     cy.get('.mat-toolbar-row .mat-focus-indicator.ng-star-inserted')
     .click()
 
+    cy.wait(2000)
     cy.get('#checkoutButton')
     .click()
 
@@ -162,5 +165,5 @@ it('order with helper', () => {
 
     cy.log('Placing an oreder is done')
 
-  })
+})
   

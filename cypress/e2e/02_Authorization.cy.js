@@ -37,7 +37,7 @@ it('Authorization success', () => {
     .click()
 
     cy.log(`Auth user with email: ${user.email} and pass: ${user.password}`)
-  })
+})
 
 it('Authorization failed', () => {
   cy.log('Open website')
